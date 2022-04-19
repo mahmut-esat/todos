@@ -1,8 +1,9 @@
 import React from 'react';
-import {View, Button, StyleSheet} from 'react-native';
+import {View, Button, StyleSheet, TouchableOpacity} from 'react-native';
 import BouncyCheckbox from 'react-native-bouncy-checkbox';
 import {useDispatch} from 'react-redux';
 import {useNavigation} from '@react-navigation/native';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 import {deleteTodo, changeTodoCompleted} from '../../redux/todosSlice';
 
@@ -38,11 +39,20 @@ const TodoCard = ({todo}) => {
           iconStyle={{borderColor: '#e6e6e6'}}
           isChecked={todo.completed}
           onPress={() => handleComplete()}
-          onLongPress={handleEditPage}
+          onLongPress={() => handleDelete(todo.id)}
         />
       </View>
       <View style={styles.button_container}>
-        <Button title="  X  " onPress={() => handleDelete(todo.id)} color="#7e57c2" />
+        <TouchableOpacity onPress={handleEditPage}>
+          <Icon
+            name="playlist-edit"
+            size={40}
+            color="#7e57c2"
+          />
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => handleDelete(todo.id)}>
+          <Icon name="delete" size={40} color="#7e57c2" />
+        </TouchableOpacity>
       </View>
     </View>
   );
@@ -68,6 +78,6 @@ const styles = StyleSheet.create({
     // justifyContent: 'flex-end',
     padding: 5,
     marginLeft: 32,
-    marginRight:2
+    marginRight: 2,
   },
 });

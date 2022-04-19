@@ -1,12 +1,5 @@
 import React, {useState} from 'react';
-import {
-  Button,
-  StyleSheet,
-  Text,
-  TextInput,
-  View,
-  Keyboard,
-} from 'react-native';
+import {Button, StyleSheet, TextInput, View, Keyboard} from 'react-native';
 import {nanoid} from '@reduxjs/toolkit';
 import {useDispatch, useSelector} from 'react-redux';
 import {addTodo, deleteAllTodo} from '../../redux/todosSlice';

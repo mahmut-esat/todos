@@ -19,7 +19,7 @@ const Router = () => {
             headerShown: false,
           }}
         />
-          <Stack.Screen name="Edit" component={Edit} />
+          <Stack.Screen name="Edit" component={Edit} options={{headerTintColor:"#7e57c2"}} />
       </Stack.Navigator>
     </NavigationContainer>
   );

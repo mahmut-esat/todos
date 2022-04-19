@@ -7,6 +7,8 @@ export default StyleSheet.create({
     backgroundColor: '#7e57c2',
     width: Dimensions.get('window').width / 3.2,
     borderRadius: 7,
+    alignItems:"center",
+    justifyContent:"center"
   },
   text: {
     textAlign: 'center',

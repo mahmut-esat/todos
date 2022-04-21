@@ -1,11 +1,12 @@
 import React from 'react';
-import {View, Button, StyleSheet, TouchableOpacity} from 'react-native';
+import {View, TouchableOpacity} from 'react-native';
 import BouncyCheckbox from 'react-native-bouncy-checkbox';
 import {useDispatch} from 'react-redux';
 import {useNavigation} from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 import {deleteTodo, changeTodoCompleted} from '../../redux/todosSlice';
+import styles from './TodoCard.style'
 
 const TodoCard = ({todo}) => {
   const dispatch = useDispatch();
@@ -59,25 +60,3 @@ const TodoCard = ({todo}) => {
 };
 
 export default TodoCard;
-
-const styles = StyleSheet.create({
-  container: {
-    padding: 5,
-    marginHorizontal: 13,
-    borderBottomWidth: 1,
-    borderBottomColor: '#d1c4e9',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-  },
-  check_container: {
-    flex: 1,
-  },
-  button_container: {
-    flexDirection: 'row',
-    // justifyContent: 'flex-end',
-    padding: 5,
-    marginLeft: 32,
-    marginRight: 2,
-  },
-});

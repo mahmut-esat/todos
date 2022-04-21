@@ -1,10 +1,13 @@
 import React, {useState} from 'react';
-import {Button, StyleSheet, TextInput, View, Keyboard} from 'react-native';
+import {TextInput, View, Keyboard} from 'react-native';
 import {nanoid} from '@reduxjs/toolkit';
 import {useDispatch, useSelector} from 'react-redux';
+
 import {addTodo, deleteAllTodo} from '../../redux/todosSlice';
 import ButtonCard from '../Button/Button';
 import {TodoSelector} from '../../redux/todosSlice';
+import styles from './input.style'
+
 
 function Input() {
   const [text, setText] = useState('');
@@ -48,25 +51,3 @@ function Input() {
 }
 
 export default Input;
-
-const styles = StyleSheet.create({
-  container: {},
-
-  input: {
-    position: 'relative',
-    margin: 10,
-    fontSize: 20,
-    color: '#4d2c91',
-    padding: 16,
-    borderBottomWidth: 1,
-    borderBottomColor: '#d1c4e9',
-    borderTopStartRadius: 20,
-    borderTopEndRadius: 10,
-  },
-  button_container: {
-    marginTop: 5,
-    marginBottom: 10,
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-  },
-});

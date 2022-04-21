@@ -1,6 +1,6 @@
 import React from 'react';
 import {ScrollView, Text} from 'react-native';
-import {useSelector, useDispatch} from 'react-redux';
+import {useSelector} from 'react-redux';
 
 import {TodoSelector} from '../../redux/todosSlice';
 import TodoCard from '../TodoCard/TodoCard';

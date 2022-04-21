@@ -11,7 +11,7 @@
 - Creating Custom Component
 - Material Icon Package
 
-![](src/assets/todos_app.gif)
+![](src/assets/todo_app.gif)
 ![](src/assets/1.jpg)
 ![](src/assets/2.jpg)
 ![](src/assets/3.jpg)
